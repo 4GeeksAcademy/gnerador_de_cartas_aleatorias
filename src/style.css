@@ -4,6 +4,7 @@ body {
 }
 
 .card {
+  box-shadow: 6px -5px 20px #0d0d0d;
   width: 27%;
   height: 500px;
   border-radius: 20px;
