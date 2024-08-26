@@ -15,6 +15,7 @@ body {
 }
 
 .heart2 {
+  transform: rotate(180deg);
   font-size: 70px;
 }
 
