@@ -1,1 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+.card {
+  width: 27%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.number {
+  font-size: 150px;
+  align-self: center;
+}
+
+.heart2 {
+  font-size: 70px;
+}
+
+.heart1 {
+  font-size: 70px;
+}
