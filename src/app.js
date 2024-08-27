@@ -38,9 +38,9 @@ window.onload = function() {
 
     return palo2;
   }
-
-  document.querySelector(".heart1").innerHTML = heartGenerator();
-  document.querySelector(".heart2").innerHTML = heartGenerator();
+  let generatedPalo = heartGenerator();
+  document.querySelector(".heart1").innerHTML = generatedPalo;
+  document.querySelector(".heart2").innerHTML = generatedPalo;
 
   function numberdGenerator() {
     const generateRandomArray = array => {
