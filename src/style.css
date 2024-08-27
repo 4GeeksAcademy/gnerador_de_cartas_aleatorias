@@ -31,3 +31,11 @@ body {
   font-size: 70px;
   padding-left: 25px;
 }
+
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
+}

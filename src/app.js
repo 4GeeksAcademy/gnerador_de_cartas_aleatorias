@@ -39,8 +39,20 @@ window.onload = function() {
     return palo2;
   }
   let generatedPalo = heartGenerator();
-  document.querySelector(".heart1").innerHTML = generatedPalo;
-  document.querySelector(".heart2").innerHTML = generatedPalo;
+  let colorClass = "";
+  if (generatedPalo === "♠" || generatedPalo === "♣") {
+    colorClass = "black";
+  } else {
+    colorClass = "red";
+  }
+  let heart1 = document.querySelector(".heart1");
+  let heart2 = document.querySelector(".heart2");
+  heart1.innerHTML = generatedPalo;
+  heart2.innerHTML = generatedPalo;
+  heart1.className = `heart1 ${colorClass}`;
+  heart2.className = `heart2 ${colorClass}`;
+  //document.querySelector(".heart1").innerHTML = generatedPalo;
+  //document.querySelector(".heart2").innerHTML = generatedPalo;
 
   function numberdGenerator() {
     const generateRandomArray = array => {
