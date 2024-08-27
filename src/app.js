@@ -4,6 +4,7 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+import { read } from "@popperjs/core";
 
 window.onload = function() {
   //write your code here
@@ -40,5 +41,5 @@ window.onload = function() {
 
     return card;
   }
-  document.querySelector(".card").innerHTML = cardGenerator();
+  document.querySelector("#card").innerHTML = cardGenerator();
 };
