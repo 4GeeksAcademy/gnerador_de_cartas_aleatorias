@@ -3,23 +3,28 @@ body {
   background-color: green;
 }
 
-.card {
-  box-shadow: 6px -5px 20px #0d0d0d;
+#card {
+  background-color: white;
+  box-shadow: 6px -5px 20px black;
   width: 27%;
   height: 500px;
   border-radius: 20px;
+  margin-top: 50px;
 }
 
 .number {
   font-size: 150px;
   align-self: center;
+  text-align: center;
 }
 
 .heart2 {
+  color: red;
   transform: rotate(180deg);
   font-size: 70px;
 }
 
 .heart1 {
+  color: red;
   font-size: 70px;
 }

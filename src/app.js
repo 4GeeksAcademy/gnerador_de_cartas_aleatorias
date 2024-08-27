@@ -26,6 +26,7 @@ window.onload = function() {
     "Q",
     "K"
   ];
+  let palos2 = ["♦", "♥", "♠", "♣"];
   function cardGenerator() {
     const generateRandomArray = array => {
       return Math.floor(Math.random() * array.length);
@@ -33,10 +34,11 @@ window.onload = function() {
 
     let randomPalos = generateRandomArray(palos);
     let randomNumeros = generateRandomArray(numeros);
+    let randomPalos2 = generateRandomArray(palos2);
 
-    let card = `${palos[randomPalos]} ${numeros[randomNumeros]}`;
+    let card = `${palos[randomPalos]} ${numeros[randomNumeros]} ${palos[randomPalos2]}`;
 
     return card;
   }
-  console.log(cardGenerator());
+  document.querySelector(".card").innerHTML = cardGenerator();
 };
