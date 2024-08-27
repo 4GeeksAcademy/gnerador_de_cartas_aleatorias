@@ -22,9 +22,12 @@ body {
   color: red;
   transform: rotate(180deg);
   font-size: 70px;
+  margin-top: 50px;
+  padding-left: 25px;
 }
 
 .heart1 {
   color: red;
   font-size: 70px;
+  padding-left: 25px;
 }

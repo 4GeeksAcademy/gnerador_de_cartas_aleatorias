@@ -27,19 +27,31 @@ window.onload = function() {
     "Q",
     "K"
   ];
-  let palos2 = ["♦", "♥", "♠", "♣"];
-  function cardGenerator() {
+  function heartGenerator() {
     const generateRandomArray = array => {
       return Math.floor(Math.random() * array.length);
     };
 
     let randomPalos = generateRandomArray(palos);
-    let randomNumeros = generateRandomArray(numeros);
-    let randomPalos2 = generateRandomArray(palos2);
 
-    let card = `${palos[randomPalos]} ${numeros[randomNumeros]} ${palos[randomPalos2]}`;
+    let palo2 = palos[randomPalos];
 
-    return card;
+    return palo2;
   }
-  document.querySelector("#card").innerHTML = cardGenerator();
+
+  document.querySelector(".heart1").innerHTML = heartGenerator();
+  document.querySelector(".heart2").innerHTML = heartGenerator();
+
+  function numberdGenerator() {
+    const generateRandomArray = array => {
+      return Math.floor(Math.random() * array.length);
+    };
+
+    let randomNumeros = generateRandomArray(numeros);
+
+    let numero = `${numeros[randomNumeros]}`;
+
+    return numero;
+  }
+  document.querySelector(".number").innerHTML = numberdGenerator();
 };
