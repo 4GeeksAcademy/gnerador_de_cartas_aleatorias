@@ -19,14 +19,14 @@ body {
   text-align: center;
 }
 
-.heart2 {
+.symbol2 {
   transform: rotate(180deg);
   font-size: 70px;
   margin-top: 50px;
   padding-left: 25px;
 }
 
-.heart1 {
+.symbol1 {
   font-size: 70px;
   padding-left: 25px;
 }

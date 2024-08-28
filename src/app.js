@@ -11,8 +11,8 @@ window.onload = function() {
   //paso 1: declarar variables de palos y numeros
   //paso 2: declarar funcion que retornara un palo random y un numero random en base a esos dos arrays
   //paso 3: ejecutar la funcion
-  let palos = ["♦", "♥", "♠", "♣"];
-  let numeros = [
+  let suit = ["♦", "♥", "♠", "♣"];
+  let credits = [
     "A",
     "2",
     "3",
@@ -32,34 +32,34 @@ window.onload = function() {
   };
 
   function heartGenerator() {
-    let randomPalos = generateRandomArray(palos);
+    let randomSuit = generateRandomArray(suit);
 
-    let palo2 = palos[randomPalos];
+    let suit2 = suit[randomSuit];
 
-    return palo2;
+    return suit2;
   }
 
   function numberdGenerator() {
-    let randomNumeros = generateRandomArray(numeros);
+    let randomCredits = generateRandomArray(credits);
 
-    let numero = `${numeros[randomNumeros]}`;
+    let credit = `${credits[randomCredits]}`;
 
-    return numero;
+    return credit;
   }
   function upDateCard() {
-    let generatedPalo = heartGenerator();
+    let generatedSuit = heartGenerator();
 
-    let heart1 = document.querySelector(".heart1");
-    let heart2 = document.querySelector(".heart2");
-    if (generatedPalo == "♥" || generatedPalo == "♦") {
-      heart1.style.color = "red";
-      heart2.style.color = "red";
+    let symbol1 = document.querySelector(".symbol1");
+    let symbol2 = document.querySelector(".symbol2");
+    if (generatedSuit == "♥" || generatedSuit == "♦") {
+      symbol1.style.color = "red";
+      symbol2.style.color = "red";
     } else {
-      heart1.style.color = "black";
-      heart2.style.color = "black";
+      symbol1.style.color = "black";
+      symbol2.style.color = "black";
     }
-    heart1.innerHTML = generatedPalo;
-    heart2.innerHTML = generatedPalo;
+    symbol1.innerHTML = generatedSuit;
+    symbol2.innerHTML = generatedSuit;
 
     document.querySelector(".number").innerHTML = numberdGenerator();
   }
@@ -82,8 +82,8 @@ window.onload = function() {
     let palosFontSize = fontSize * 0.7;
     let numberFontSize = fontSize;
 
-    document.querySelector(".heart1").style.fontSize = `${palosFontSize}px`;
-    document.querySelector(".heart2").style.fontSize = `${palosFontSize}px`;
+    document.querySelector(".symbol1").style.fontSize = `${palosFontSize}px`;
+    document.querySelector(".symbol2").style.fontSize = `${palosFontSize}px`;
     document.querySelector(".number").style.fontSize = `${numberFontSize}px`;
   }
 
