@@ -71,4 +71,5 @@ window.onload = function() {
   upDateCard();
 
   setInterval(upDateCard, 10000);
+  document.querySelector("#change").addEventListener("click", upDateCard);
 };
