@@ -20,7 +20,6 @@ body {
 }
 
 .heart2 {
-  color: red;
   transform: rotate(180deg);
   font-size: 70px;
   margin-top: 50px;
@@ -28,15 +27,6 @@ body {
 }
 
 .heart1 {
-  color: red;
   font-size: 70px;
   padding-left: 25px;
-}
-
-.black {
-  color: black;
-}
-
-.red {
-  color: red;
 }

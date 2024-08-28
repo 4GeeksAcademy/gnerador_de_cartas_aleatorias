@@ -27,11 +27,11 @@ window.onload = function() {
     "Q",
     "K"
   ];
-  function heartGenerator() {
-    const generateRandomArray = array => {
-      return Math.floor(Math.random() * array.length);
-    };
+  const generateRandomArray = array => {
+    return Math.floor(Math.random() * array.length);
+  };
 
+  function heartGenerator() {
     let randomPalos = generateRandomArray(palos);
 
     let palo2 = palos[randomPalos];
@@ -40,10 +40,6 @@ window.onload = function() {
   }
 
   function numberdGenerator() {
-    const generateRandomArray = array => {
-      return Math.floor(Math.random() * array.length);
-    };
-
     let randomNumeros = generateRandomArray(numeros);
 
     let numero = `${numeros[randomNumeros]}`;
@@ -52,26 +48,27 @@ window.onload = function() {
   }
   function upDateCard() {
     let generatedPalo = heartGenerator();
-    let colorClass = "";
-    if (generatedPalo === "♠" || generatedPalo === "♣") {
-      colorClass = "black";
-    } else {
-      colorClass = "red";
-    }
+
     let heart1 = document.querySelector(".heart1");
     let heart2 = document.querySelector(".heart2");
+    if (generatedPalo == "♥" || generatedPalo == "♦") {
+      heart1.style.color = "red";
+      heart2.style.color = "red";
+    } else {
+      heart1.style.color = "black";
+      heart2.style.color = "black";
+    }
     heart1.innerHTML = generatedPalo;
     heart2.innerHTML = generatedPalo;
-    heart1.className = `heart1 ${colorClass}`;
-    heart2.className = `heart2 ${colorClass}`;
 
     document.querySelector(".number").innerHTML = numberdGenerator();
   }
-
+  document.querySelector("#change").addEventListener("click", () => {
+    upDateCard();
+  });
   upDateCard();
 
   setInterval(upDateCard, 10000);
-  document.querySelector("#change").addEventListener("click", upDateCard);
 
   function cardDimentions() {
     let width = document.querySelector("#width").value;
