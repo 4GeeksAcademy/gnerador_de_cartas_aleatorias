@@ -72,4 +72,24 @@ window.onload = function() {
 
   setInterval(upDateCard, 10000);
   document.querySelector("#change").addEventListener("click", upDateCard);
+
+  function cardDimentions() {
+    let width = document.querySelector("#width").value;
+    let heigth = document.querySelector("#heigth").value;
+
+    let card = document.getElementById("card");
+    card.style.width = width + "px";
+    card.style.height = heigth + "px";
+
+    let fontSize = Math.min(width, heigth) * 0.2;
+    let palosFontSize = fontSize * 0.7;
+    let numberFontSize = fontSize;
+
+    document.querySelector(".heart1").style.fontSize = `${palosFontSize}px`;
+    document.querySelector(".heart2").style.fontSize = `${palosFontSize}px`;
+    document.querySelector(".number").style.fontSize = `${numberFontSize}px`;
+  }
+
+  document.querySelector("#width").addEventListener("input", cardDimentions);
+  document.querySelector("#heigth").addEventListener("input", cardDimentions);
 };
